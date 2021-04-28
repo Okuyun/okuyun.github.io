@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/Kuran/image/icon.png">
   <title>Iqra V4 Giriş</title>
 
   <style>
@@ -11,6 +12,7 @@
   body{
     background: #f2f2f2;
     font-family: 'Poppins', sans-serif;
+    font-size: 15px;
   }
   div {
     margin: 0.5em;
@@ -18,20 +20,36 @@
     padding: 0.5em;
     display: inline-block;
     background: honeydew;
+    /* width: 290px;  */
+    height: 300px;
+  }
+  a img {
+    position: relative;
+    top: 17px;
+    width: 50px;
   }
   .repo, .link {
+    display: inline-block;
+    text-align: center;
     text-decoration: none;
     border-radius: 10px;
     border: 2px solid gray;
     padding: 5px 15px;
   }
+  .repo:hover, .link:hover {
+    background: #6f6fff;
+  }
   .repo {
-    font-size: 30px;
+    width: 90px;
+    font-size: 24px;
     color: white;
     background: rgb(30, 30, 250);
   }
   .link {
-    font-size: 20px;
+    width: 60px;
+    font-size: 18px;
+    margin: 0 5px;
+    color: black;
     background: rgb(167, 248, 248);
   }
   </style>
@@ -39,44 +57,52 @@
 
 <body>
 
-<h1>Iqra4 &ndash; Okuyun</h1>
+<h1>Iqra4 &ndash; Okuyun&ensp;
+  <a href="https://github.com/Okuyun/" target="Kuran">
+    <img alt="https://github.com/Okuyun/""
+    src="/Kitap/icon/github.webp" /></a>
+</h1>
 <p>
   Kuran-ı Kerim'de araştırma ve keşif için<br>
-  üç bölümden ibaret, açık kaynak yazılım
+  üç bölümden ibaret, açık kaynak yazılım.<br>
+  <br>
+  Her bölüm GitHub'da ayrı bir repo:
 </p>
 <div>
-  <a class=repo href="/Kuran/">Kuran</a> &emsp;
+  <a class=repo href="/Kuran/">Kuran</a>&ensp;
+  <a><img src="/Kuran/image/icon.png" /></a>&ensp;
   <a href="https://github.com/Okuyun/Kuran" target="Kuran">
-    <img alt="https://github.com/Okuyun/Kuran"" style="width: 40px"
-    src="/Kitap/icon/github.webp" /></a>
-  <p>Iqra4 giriş sayfası ve dokümanlar</p>
-  <a class=link href="/Kuran/#r=sjd">Mucem</a> Mucem'de arama<br><br>
-  <a class=link href="/Kuran/guideQ.html">Kılavuz</a> Yardım sayfaları<br><br>
-  <a class=link href="/Kuran/" hidden>Mushaf</a><br><br>
+    <img src="/Kitap/icon/github.webp" /></a>
+  <p>Iqra4 giriş sayfası ve dokümanları</p>
+  <a class=link href="/Kuran/#r=sjd">Mucem</a> Kelime kökleri<br><br>
+  <a class=link href="/Kuran/#b=bisomi">Rehber</a> Kelime ara<br><br>
+  <a class=link href="/Kuran/guideQ.html">Yardım</a> Yardım sayfaları<br><br>
 </div>
 <div>
-  <a class=repo href="/Rehber/">Rehber</a> &emsp;
+  <a class=repo href="/Rehber/">Rehber</a>&emsp;
   <a href="https://github.com/Okuyun/Rehber" target="Kuran">
-    <img alt="https://github.com/Okuyun/Rehber"" style="width: 40px" 
+    <img alt="https://github.com/Okuyun/Rehber"" 
     src="/Kitap/icon/github.webp" /></a> A. Rajab
   <p>FSMVÜ mezuniyet projesi (2020)</p>
-  <a class=link href="/Kuran/#b=bisomi">Ara</a> Kelime bazında arama<br><br>
+  <a class=link href="/Rehber/finder.html">Ara</a> Kelime aramak için<br><br>
   <a class=link href="/Rehber/reader.html">Oku</a> Ana metni okumak için<br><br>
-  <a class=link href="/Rehber/simi.html">Simi</a> Ayetler arasında benzerlik<br><br>
+  <a class=link href="/Rehber/simi.html">Simi</a> Ayetlerin benzerliği<br><br>
 </div>
 <div>
-  <a class=repo href="/Kitap/">Kitap</a> &emsp;
+  <a class=repo href="/Kitap/">Kitap</a>&emsp;
   <a href="https://github.com/Okuyun/Kitap" target="Kuran">
-    <img alt="https://github.com/Okuyun/Kitap"" style="width: 40px" 
+    <img alt="https://github.com/Okuyun/Kitap"" 
     src="/Kitap/icon/github.webp" /></a> M A Eyler
   <p>Yazılımı kullanan kitap sayfaları</p>
-  <a class=link href="/Kuran/#m=index">Rama</a> 2021 Ramazan notları<br><br>
+  <a class=link href="/Kuran/#m=index">Notlar</a> 2020 Ramazan notları<br><br>
   <a class=link href="/Kuran/#d=index">Ders</a> Kuran kelimelerinin gücü<br><br>
-  <a class=link href="/Kuran/#m=index" hidden>Cuma</a><br><br>
+  <a class=link>Cuma</a> <small>(eklenecek)</small><br><br>
 </div>
 
 <script>
-
+    for (let i of document.querySelectorAll('img'))
+      if (i.src.endsWith('webp'))
+        i.title = "GitHub repository"
 </script>
 
 </html>
