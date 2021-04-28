@@ -58,9 +58,7 @@
 <body>
 
 <h1>Iqra4 &ndash; Okuyun&ensp;
-  <a href="https://github.com/Okuyun/" target="Kuran">
-    <img alt="https://github.com/Okuyun/""
-    src="/Kitap/icon/github.webp" /></a>
+  <a class=github name=""></a>
 </h1>
 <p>
   Kuran-ı Kerim'de araştırma ve keşif için<br>
@@ -71,18 +69,15 @@
 <div>
   <a class=repo href="/Kuran/">Kuran</a>&ensp;
   <a><img src="/Kuran/image/icon.png" /></a>&ensp;
-  <a href="https://github.com/Okuyun/Kuran" target="Kuran">
-    <img src="/Kitap/icon/github.webp" /></a>
+  <a class=github name="Kuran"></a>
   <p>Iqra4 giriş sayfası ve dokümanları</p>
   <a class=link href="/Kuran/#r=sjd">Mucem</a> Kelime kökleri<br><br>
   <a class=link href="/Kuran/#b=bisomi">Rehber</a> Kelime ara<br><br>
-  <a class=link href="/Kuran/guideQ.html">Yardım</a> Yardım sayfaları<br><br>
+  <a class=link href="/Kuran/guideQ.html" target="Kuran">Yardım</a> Yardım sayfaları<br><br>
 </div>
 <div>
   <a class=repo href="/Rehber/">Rehber</a>&emsp;
-  <a href="https://github.com/Okuyun/Rehber" target="Kuran">
-    <img alt="https://github.com/Okuyun/Rehber"" 
-    src="/Kitap/icon/github.webp" /></a> A. Rajab
+  <a class=github name="Rehber"></a> A. Rajab
   <p>FSMVÜ mezuniyet projesi (2020)</p>
   <a class=link href="/Rehber/finder.html">Ara</a> Kelime aramak için<br><br>
   <a class=link href="/Rehber/reader.html">Oku</a> Ana metni okumak için<br><br>
@@ -90,9 +85,7 @@
 </div>
 <div>
   <a class=repo href="/Kitap/">Kitap</a>&emsp;
-  <a href="https://github.com/Okuyun/Kitap" target="Kuran">
-    <img alt="https://github.com/Okuyun/Kitap"" 
-    src="/Kitap/icon/github.webp" /></a> M A Eyler
+  <a class=github name="Kitap"></a> M A Eyler
   <p>Yazılımı kullanan kitap sayfaları</p>
   <a class=link href="/Kuran/#m=index">Notlar</a> 2020 Ramazan notları<br><br>
   <a class=link href="/Kuran/#d=index">Ders</a> Kuran kelimelerinin gücü<br><br>
@@ -100,9 +93,12 @@
 </div>
 
 <script>
-    for (let i of document.querySelectorAll('img'))
-      if (i.src.endsWith('webp'))
-        i.title = "GitHub repository"
+    for (let a of document.querySelectorAll('a.github')) {
+      a.href = "https://github.com/Okuyun/"+a.name
+      a.title = "GitHub repository"; a.target = "Kuran"
+      a.innerHTML = '<img alt="https://github.com/Okuyun/'
+        +a.name+'" src="/Kitap/icon/github.webp" />'
+    }
 </script>
 
 </html>
